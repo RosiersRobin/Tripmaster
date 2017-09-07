@@ -1,0 +1,15 @@
+{% extends "layouts/default.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+    <div class="row index-center-margin">
+        <a href="{{ url_for('tripmaster') }}" class="col-sm-4 index-btn">Tripmaster</a>
+        <a href="{{ url_for('drawmode') }}" class="col-sm-4 index-btn">Tekenmodus</a>
+    </div>
+    <div class="row index-top-spacing">
+        <a href="{{ url_for('settings') }}" class="col-sm-4 index-btn">Instellingen</a>
+        <a href="#" data-toggle="modal" data-target="#shutdown" class="col-sm-4 index-btn red-btn"><i class="mdi mdi-power mdi-48px"></i></a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3afb55da-60a9-4eb6-b4d1-d51e43ccc5db" name="Tripmaster" url="http://192.168.0.100">
+        <fileTransfer host="192.168.0.100" port="22" rootFolder="/home/pi" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="827f38c2-4035-4b88-8676-77bea38c47b3" name="Tripmaster_school" url="http://169.254.10.1">
+        <fileTransfer host="169.254.10.1" port="22" rootFolder="/home/pi" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

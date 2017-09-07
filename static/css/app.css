@@ -1,0 +1,444 @@
+/*
+* It's Material Design based.
+*/
+@import url("../fonts/Roboto-Regular.ttf");
+
+/**************************************
+* Global CSS
+**************************************/
+body{
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: #303030;
+    font-size: 16px;
+    outline:0;
+}
+
+strong{
+    font-weight: bold;
+}
+
+li{
+    list-style: none;
+}
+
+/*li.trip-info{*/
+    /*width: 140px;*/
+/*}*/
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+/**************************************
+* Header CSS
+**************************************/
+.page-title{
+    top: 3px;
+    position: relative;
+}
+
+.navbar-brand{
+    top: 3px;
+    position: relative;
+}
+
+.navbar-header > a:nth-child(2) > i{
+    color: #ffffff;
+}
+
+.navbar-default {
+    background: #212121;
+    -webkit-box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
+    -moz-box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
+    border: none;
+    height: 55.8px;
+}
+
+#navbar > ul > li:nth-child(1) > a.menu-item-green{
+    background-color: #1B5E20;
+    padding: 20px 12px 15.8px 12px;
+}
+
+#navbar > ul > li:nth-child(1) > a.menu-item-red {
+    background-color: #B71C1C;
+    padding: 20px 12px 15.8px 12px;
+}
+
+/**************************************
+* Index page css
+**************************************/
+.index-center-margin{
+    margin-top: 170px;
+}
+
+.index-btn{
+    padding: 51px 35px 31px 35px;
+    background-color: #424242;
+    height: 127px;
+    width: 370px;
+    vertical-align: middle;
+    font-size: 23px;
+}
+
+.index-btn:nth-child(odd){
+    margin-left:75px;
+}
+
+.index-btn:nth-child(even){
+    margin-left:35px;
+}
+
+.index-top-spacing{
+    margin-top:35px;
+}
+
+.index-btn.red-btn{
+    color: #ffffff;
+}
+
+/**************************************
+* Tripmaster page style
+**************************************/
+.trip-content{
+    margin-top: 160px;
+}
+
+.trip-item{
+    color: #95989A;
+    background-color: rgba(82, 82, 82, 0.15);
+}
+
+.trip-item-s{
+    height: 60px;
+    padding: 14px 10px 11px 11px;
+}
+
+.trip-item-s-text{
+    height: 60px;
+    padding-top: 3px;
+}
+
+.trip-item-l{
+    height:39px;
+    padding-top: 4px;
+}
+
+.trip-item-xl{
+    height: 84px;
+    padding: 16px 63px 1px 63px;
+}
+
+.trip-margin-left{
+    margin-left: 30px;
+}
+
+.trip-margin-top{
+    margin-top: 24px;
+}
+
+.trip-margin-top-small{
+    margin-top: 7px;
+}
+
+/**************************************
+* Drawmode page style
+**************************************/
+.drwm-page{
+    color: #ffffff;
+    margin-top: 72px;
+}
+
+.drwm-img > img{
+    width: 700px;
+    height: 420px;
+    float: left;
+}
+
+.drwm-btn{
+    color: #ffffff;
+    padding: 9px 72px 10px 72px;
+    margin-left: 15px;
+    width: 262.5px;
+    margin-top: 15px;
+    -webkit-box-shadow: 0 9px 6px 0 rgba(0,0,0,0.16);
+    -moz-box-shadow: 0 9px 6px 0 rgba(0,0,0,0.16);
+    box-shadow: 0 9px 6px 0 rgba(0,0,0,0.16);
+}
+
+.drwm-btn-s{
+    width: 170px;
+    background-color: rgba(82, 82, 82, 0.15);
+    padding: 8px 10px 8px 10px;
+}
+
+.drwm-page > div.col-sm-2 > div:not(:first-child) > div{
+    margin-top: 19px;
+}
+
+.green-btn{
+    background-color: #1B5E20;
+}
+
+.red-btn{
+    background-color: #B71C1C;
+}
+
+.orange-btn{
+    background-color: #E65100;
+    color: #ffffff;
+}
+
+
+/**************************************
+* Settings page style
+**************************************/
+.settings{
+    margin-top: 150px;
+}
+
+.settings-2{
+    margin-top: 40px;
+}
+
+.setting-item{
+    color: #ffffff;
+    width: 270px;
+    height: 100px;
+    padding-top: 42px;
+    background-color: rgba(82, 82, 82, 0.15);
+}
+
+.setting-item:not(:first-child){
+    margin-left: 39.5px;
+}
+
+.setting-item-slider{
+    color: #ffffff;
+    width: 270px;
+    height: 50px;
+    padding-top: 12px;
+}
+
+.green-settings-btn{
+    background-color: #1B5E20;
+}
+
+.red-settings-btn{
+    background-color: #B71C1C;
+    -webkit-box-shadow: 0 9px 6px 0 rgba(0,0,0,0.16);
+    -moz-box-shadow: 0 9px 6px 0 rgba(0,0,0,0.16);
+    box-shadow: 0 9px 6px 0 rgba(0,0,0,0.16);
+}
+
+.settings-2 > div:nth-child(1) > label{
+    display: none;
+}
+
+body > div.container.text-center > div.row.settings > a{
+    color: #ffffff;
+}
+
+body > div.container.text-center > div.row.settings-2 > a{
+    color: #ffffff;
+}
+
+/**************************************
+* SPECIAL MDI STYLING
+* DO NOT TOUCH UNLESS YOU KNOW WHAT YOU
+* ARE DOING
+**************************************/
+.mdi-power{
+    position: relative;
+    top: -20px;
+}
+
+#navbar > ul > li > a > i.mdi{
+    position: relative;
+    top: 3px;
+}
+
+/**************************************
+* Button styling, this is to see the 
+* differene between a button and a 
+* informative box.
+**************************************/
+.act-btn{
+    -webkit-box-shadow: 0 9px 6px 0 rgba(0,0,0,0.16);
+    -moz-box-shadow: 0 9px 6px 0 rgba(0,0,0,0.16);
+    box-shadow: 0 9px 6px 0 rgba(0,0,0,0.16);
+    background-color: rgba(82, 82, 82, 1);
+}
+
+
+/**************************************
+* Link styles
+**************************************/
+a{
+    color: #95989A;
+    text-decoration: none;
+}
+
+a:link{
+    color: #95989A;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #95989A;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #95989A;
+    text-decoration: none;
+}
+
+a:active{
+    color: #95989A;
+    text-decoration: none;
+}
+
+#navbar > ul > li > a{
+    color: #ffffff;
+}
+
+/**************************************
+* Modal styles
+**************************************/
+.modal{
+    top: 50px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.modal-content{
+    border: none;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+    background-color: #424242;
+    color: #ffffff;
+}
+
+.modal-header{
+    border: none;
+    text-align: center;
+}
+
+.modal-footer{
+    border: none;
+}
+
+.modal-danger{
+    top: 0;
+    color: #ffffff;
+    background-color: rgba(138, 28, 28, .5);
+}
+
+.modal-danger .modal-content{
+    background-color: #F44336;
+}
+
+.btn {
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-default{
+    color: #80CBC4;
+}
+
+.btn-danger{
+    color: #F44336;
+}
+
+.btn-warning{
+    color: #E65100;
+}
+
+.btn-warning:active, .btn-danger:active, .btn-default:active, .btn-warning:focus, .btn-danger:focus, .btn-default:focus,
+.btn-warning:hover, .btn-danger:hover, .btn-default:hover, .btn-warning:visited, .btn-danger:visited,
+.btn-default:visited, .btn-warning:active:focus, .btn-danger:active:focus, .btn-default:active:focus {
+    background-color: transparent;
+    box-shadow: none;
+    border-color: transparent;
+    outline: 0;
+}
+
+.btn-danger-modal{
+    color:#D50000;
+}
+
+.btn-success{
+    color: #43A047;
+}
+
+#clock_nav, #cur_speed_nav, #total_distance_nav, #avg_speed_nav{
+    display: inline;
+}
+
+#pref_avg_speed{
+    margin: 20px 0;
+}
+
+.item-top-margin{
+    margin-top: 25px;
+}
+
+.settings-left-margin{
+    margin-left: 39px;
+}
+
+#ideal_start > div > div > div.modal-body > div > input{
+    width: 80px;
+    float: right;
+}
+
+.clockpicker{
+    margin-top: 25px;
+    margin-right: 210px;
+    margin-left: 210px;
+}
+
+.btn-active{
+    -webkit-box-shadow: inset 5px 5px 10px 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 5px 5px 10px 0 rgba(0,0,0,0.5);
+    box-shadow: inset 5px 5px 10px 0 rgba(0,0,0,0.5);
+}
+/*
+* The style for the touchscreen
+*/
+
+#toggle_drive_wrong{
+    width: 164px;
+}
+
+body > div.container.text-center > div > div:nth-child(1) > div:nth-child(1) > a{
+    width: 204px;
+}
+
+body > div.container.text-center > div > div:nth-child(2) > div:nth-child(1) > a{
+    width: 204px;
+}
+
+body > div.container.text-center > div:nth-child(2) > div.col-sm-5.drwm-btn.green-btn, body > div.container.text-center > div:nth-child(2) > div.col-sm-5.drwm-btn.red-btn{
+    width: 343px;
+}
+
+#wrong_traject_info{
+    width: 430px;
+}
+
+.active_toggle_trip{
+    /*background-color: rgb(116, 116, 116);*/
+    -webkit-box-shadow: 0 9px 6px 0 rgba(121, 255, 121, 0.1);
+    -moz-box-shadow: 0 9px 6px 0 rgba(121, 255, 121, 0.1);
+    box-shadow: 0 9px 6px 0 rgba(121, 255, 121, 0.1);
+}

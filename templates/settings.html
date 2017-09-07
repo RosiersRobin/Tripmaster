@@ -1,0 +1,25 @@
+{% extends "layouts/default.html" %}
+{% block title %}Instellingen{% endblock %}
+
+{% block content %}
+
+    <div class="row settings">
+        <a href="#" data-toggle="modal" data-target="#reset_database" class="col-sm-4 setting-item red-settings-btn">Reset database</a>
+        <a href="#" data-toggle="modal" data-target="#export_route" class="col-sm-4 setting-item act-btn">Exporteer routes</a>
+        {% if status == "GPS fix" or status == "Dif. GPS fix" %}
+            <div class="col-sm-4 setting-item green-settings-btn">GPS status: {{ status }}</div>
+        {% else %}
+            <div class="col-sm-4 setting-item red-settings-btn">GPS status: {{ status }}</div>
+        {% endif %}
+    </div>
+    <div class="row settings-2">
+        <div class="col-sm-4 setting-item">Helderheid</div>
+        <div class="col-sm-4 setting-item-slider settings-left-margin">
+            <div class="range-slider">
+                <input class="range-slider__range" name="brightness" type="range" value="{{ brightness }}" min="0" max="100" onchange="update_pref_brightness();">
+            </div>
+        </div>
+        <div class="col-sm-4 setting-item">IP: {{ ip }}</div>
+    </div>
+
+{% endblock %}

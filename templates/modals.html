@@ -1,0 +1,132 @@
+{# Modals go here #}
+<!-- Shutdown Modal -->
+<div id="shutdown" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Systeem afsluiten</h4>
+            </div>
+            <div class="modal-body">
+                <p>Bent u zeker dat u het systeem wenst uit te schakelen?
+                    Indien het systeem wordt uitgeschakeld dient u de "power" knop nog 3 seconden in te drukken nadat
+                    het systeem uitgeschakeld is.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning pull-left" data-dismiss="modal" onclick="rebootSystem();">Reboot</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="shutdownSystem();">Afsluiten</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Annuleren</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- set average speed Modal -->
+<div id="avg_speed" class="modal fade text-center" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Gemiddelde snelheid</h4>
+            </div>
+
+            <form method="post" id="post_pref_avg_speed">
+                <div class="modal-body">
+                    <p>Aan te houden gemiddelde</p>
+                    <div class="range-slider" id="pref_avg_speed">
+                        <input name="pref_speed" class="range-slider__range" type="range" value="{{ pref_avg_speed }}" min="20" max="50" step="1">
+                        <div class="range-slider__value"></div> km/u
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success" data-dismiss="modal" id="pref_avg_speed_submit_btn" onclick="updateAverageSpeed()">Opslaan</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Annuleren</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- set ideal start time Modal -->
+<div id="ideal_start" class="modal fade text-center" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Ideale starttijd</h4>
+            </div>
+            <form method="post" id="post_ideal_start_time">
+                <div class="modal-body">
+                    <p>Ideale starttijd in uur en minuten instellen. De seconden zijn altijd '00'</p>
+{#                    <div class="input-group clockpicker">#}
+{#                        <input type="text" class="form-control" name="time" value="">#}
+{#                        <span class="input-group-addon">#}
+{#                            <span class="mdi mdi-clock mdi-12px"></span>#}
+{#                        </span>#}
+{#                    </div>#}
+                    <div class="input-group bootstrap-timepicker timepicker">
+                      <input id="timepicker" name="time" value="" type="text" class="form-control input-small">
+                      <span class="input-group-addon">
+                        <span class="mdi mdi-clock mdi-12px"></span>
+                      </span>
+                    </div>
+                </div>
+            </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal" id="ideal_start_time_submit_btn" onclick="update_pref_start_time()">Opslaan</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Annuleren</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Export routes Modal -->
+<div id="export_route" class="modal fade text-center" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Route exporteren</h4>
+            </div>
+            <div class="modal-body">
+                <p>Bij het exporteren wordt er een bestand opgeslagen op uw computer. Dit bestand is een
+                bedoeld om geïmporteerd te worden in ....</p>
+            </div>
+            <div class="modal-footer">
+                <button onclick="alert('Momenteel niet mogelijk')" type="button" class="btn btn-success" data-dismiss="modal">Exporteren</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Annuleren</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- reset database Modal -->
+<div id="reset_database" class="modal modal-danger fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Database resetten</h4>
+            </div>
+            <div class="modal-body">
+                <p>U staat op het punt om de database te resetten Deze reset houdt in:</p>
+                    <ul>
+                        <li>- Alle routes worden gewist</li>
+                        <li>- De ideale starttijd wordt herleid naar 00:00:00</li>
+                        <li>- Alle trip-data worden verwijderd.</li>
+                    </ul>
+                <p>Dit kan niet worden ongedaan gemaakt.</p>
+                <p>Weet u zeker dat u deze actie wilt ondernemen?</p>
+            </div>
+            <div class="modal-footer">
+                <button onclick="reset_database()" type="button" class="btn btn-danger-modal" data-dismiss="modal">Reset</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Annuleren</button>
+            </div>
+        </div>
+    </div>
+</div>

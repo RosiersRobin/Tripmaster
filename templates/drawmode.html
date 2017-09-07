@@ -1,0 +1,31 @@
+{% extends "layouts/default.html" %}
+{% block title %}Tekenmodus{% endblock %}
+
+{% block content %}
+
+    <div class="row drwm-page">
+        <div class="col-sm-10 drwm-img pull-left"><img src="{{ url_for('static', filename="img/map-placeholder.png") }}"></div>
+        <div class="col-sm-2">
+             <div class="row">
+                <div class="col-sm-12 drwm-btn-s act-btn">Mark point</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 drwm-btn-s act-btn">Place letter</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 drwm-btn-s act-btn">Place number</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 drwm-btn-s act-btn">Street name</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 drwm-btn-s act-btn">Set TC</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-5 drwm-btn green-btn">Start</div>
+        <div class="col-sm-5 drwm-btn red-btn">Stop</div>
+    </div>
+
+{% endblock %}

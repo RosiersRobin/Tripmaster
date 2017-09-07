@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    {# Because of the touch function, users may not zoom in. #}
+    <meta name="viewport" content="user-scalable=no">
+    <title>RPR tripmaster - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/materialdesignicons.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/range-slider.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/timepicker.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}"/>
+    {% endblock %}
+</head>
+<body>
+
+    {# Navigation #}
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                {% if 'index' in request.url_rule.rule %}
+                    {# Make sure the menu here is made, however it doesn't have any function (yet) #}
+                    {# <a class="navbar-brand" href="#"><i class="back-icon mdi mdi-menu mdi-24px"></i></a>#}
+                {% else %}
+                    <a class="navbar-brand" href="{{ url_for('index') }}"><i class="back-icon mdi mdi-arrow-left mdi-24px"></i></a>
+                {% endif %}
+                <a class="navbar-brand page-title" href="#">{{ self.title() }}</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    {% if 'index' not in request.url_rule.rule and 'settings' not in request.url_rule.rule %}
+                        {% if 'drawmode' not in request.url_rule.rule %}
+                            {% if trip_state() == 0 %}
+                                <li><a href="#" id="start-stop-trip" class="menu-item-green">start trip</a></li>
+                            {% else %}
+                                {# To make the trip say "stop trip", change the green to red. #}
+                                <li><a href="#" id="start-stop-trip" class="menu-item-red">stop trip</a></li>
+                            {% endif %}
+                        {% endif %}
+
+                        <li class="trip-info"><a href="#"><i class="back-icon mdi mdi-road-variant mdi-24px"></i> <div id="total_distance_nav">0 km</div></a></li>
+                        <li class="trip-info"><a href="#"><i class="back-icon mdi mdi-speedometer mdi-24px"></i> <div id="cur_speed_nav">0 km/u</div></a></li>
+                        <li class="trip-info"><a href="#"><i class="back-icon mdi mdi-clock mdi-24px"></i> <div id="clock_nav">00:00:00</div></a></li>
+                    {% endif %}
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+
+    <div class="container text-center">
+        {% block content %}{% endblock %}
+    </div>
+
+    {% include 'modals.html' %}
+</body>
+
+<script src="{{ url_for('static', filename='js/jquery-3.1.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/range-slider.js') }}"></script>
+<script src="{{ url_for('static', filename='js/timepicker.js') }}"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</html>

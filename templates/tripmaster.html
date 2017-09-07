@@ -1,0 +1,37 @@
+{% extends "layouts/default.html" %}
+{% block title %}Tripmaster{% endblock %}
+
+{% block content %}
+
+    <div class="row trip-content">
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-5 trip-item trip-item-s">Gem. <div id="avg_speed_nav">0</div> km/u</div>
+                <a href="#" data-toggle="modal" data-target="#avg_speed" class="col-sm-5 trip-item trip-item-s-text trip-margin-left act-btn">Ingesteld Gem. <br> <strong id="cur_pref_avg_speed">{{ pref_avg_speed }} km/u</strong></a>
+            </div>
+            <div class="row item-top-margin">
+                <div id="toggleTripA" data-running="0" data-needsreset="0" class="col-sm-11 trip-item trip-item-xl trip-margin-top act-btn">Trip A toggle to start/stop. <br> <p id="toggle_trip_a_info">0.0 km</p></div>
+            </div>
+            <div class="row item-top-margin">
+                <div class="col-sm-11 trip-item trip-item-l trip-margin-top">Inklokken stop:  <strong id="ideal_time_for_stop">+/- 000 minuten</strong></div>
+            </div>
+            <div class="row">
+                <div id="wrong_traject_info" data-ison="0" class="col-sm-10 trip-item trip-item-l trip-margin-top-small">Verkeerd traject</div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-5 trip-item trip-item-s-text">Foutief verreden <br><strong id="total_dist_wrong">000 km</strong></div>
+                <a href="#" data-toggle="modal" data-target="#ideal_start" class="col-sm-5 trip-item trip-item-s-text trip-margin-left act-btn">Ideale starttijd <p><strong id="ideal_starting_time">{{ ideal_start_time }}</strong></p></a>
+            </div>
+            <div class="row item-top-margin">
+                <div id="toggleTripB" data-running="0" data-needsreset="0" class="col-sm-11 trip-item trip-item-xl trip-margin-top act-btn">Trip B toggle to start/stop. <br> <p id="toggle_trip_b_info">0.0 km</p></div>
+            </div>
+            <div class="row item-top-margin">
+                <div class="col-sm-11 trip-item trip-item-xl trip-margin-top">Ideale stoptijd TK <br> <strong id="ideal_stop_time">00:00:00</strong></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
